@@ -1,0 +1,114 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://petdibs.herokuapp.com/pets
+    body:
+      encoding: UTF-8
+      string: token=SLACK_TOKEN&channel=ports-api-testing&text=Hey%20I%20can%20post%20messages%21
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 503
+      message: Service Unavailable
+    headers:
+      Connection:
+      - keep-alive
+      Server:
+      - Cowboy
+      Date:
+      - Wed, 20 Mar 2019 14:49:33 GMT
+      Content-Length:
+      - '506'
+      Content-Type:
+      - text/html; charset=utf-8
+      Cache-Control:
+      - no-cache, no-store
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\n\t<html>\n\t  <head>\n\t\t<meta name=\"viewport\"
+        content=\"width=device-width, initial-scale=1\">\n\t\t<meta charset=\"utf-8\">\n\t\t<title>Application
+        Error</title>\n\t\t<style media=\"screen\">\n\t\t  html,body,iframe {\n\t\t\tmargin:
+        0;\n\t\t\tpadding: 0;\n\t\t  }\n\t\t  html,body {\n\t\t\theight: 100%;\n\t\t\toverflow:
+        hidden;\n\t\t  }\n\t\t  iframe {\n\t\t\twidth: 100%;\n\t\t\theight: 100%;\n\t\t\tborder:
+        0;\n\t\t  }\n\t\t</style>\n\t  </head>\n\t  <body>\n\t\t<iframe src=\"//www.herokucdn.com/error-pages/application-error.html\"></iframe>\n\t
+        \ </body>\n\t</html>"
+    http_version: 
+  recorded_at: Wed, 20 Mar 2019 14:49:32 GMT
+- request:
+    method: post
+    uri: https://slack.com/api/chat.postMessage
+    body:
+      encoding: UTF-8
+      string: token=SLACK_TOKEN&channel=ports-api-testing&text=Hey%20I%20can%20post%20messages%21
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '168'
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 20 Mar 2019 14:51:25 GMT
+      Server:
+      - Apache
+      X-Content-Type-Options:
+      - nosniff
+      X-Slack-Req-Id:
+      - f4bdf9dd-3906-44da-b129-a1ef9b1a956f
+      X-Oauth-Scopes:
+      - identify,channels:read,users:read,chat:write:bot
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Access-Control-Expose-Headers:
+      - x-slack-req-id
+      X-Xss-Protection:
+      - '0'
+      X-Accepted-Oauth-Scopes:
+      - chat:write:bot
+      Vary:
+      - Accept-Encoding
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Headers:
+      - slack-route, x-slack-version-ts
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Referrer-Policy:
+      - no-referrer
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Via:
+      - haproxy-www-77ge
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 3fcd7d0200438e7af0ce180cc71925ad.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - gHmlYqlByZPw7VmFETmww8mlqa6vCgr-D6ybSHI28CvYdU9bzewB5Q==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ok":true,"channel":"CFQT801G9","ts":"1553093485.000200","message":{"type":"message","subtype":"bot_message","text":"Hey
+        I can post messages!","ts":"1553093485.000200","username":"CheezItApp","bot_id":"BH55B5YQM"}}'
+    http_version: 
+  recorded_at: Wed, 20 Mar 2019 14:51:23 GMT
+recorded_with: VCR 4.0.0
