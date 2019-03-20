@@ -111,4 +111,70 @@ http_interactions:
         I can post messages!","ts":"1553093485.000200","username":"CheezItApp","bot_id":"BH55B5YQM"}}'
     http_version: 
   recorded_at: Wed, 20 Mar 2019 14:51:23 GMT
+- request:
+    method: post
+    uri: https://slack.com/api//chat.postMessage
+    body:
+      encoding: UTF-8
+      string: token=SLACK_TOKEN&text=Hey%20I%20can%20post%20messages%21&channel=ports-api-testing
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 20 Mar 2019 15:01:14 GMT
+      Server:
+      - Apache
+      X-Content-Type-Options:
+      - nosniff
+      X-Slack-Req-Id:
+      - 1f1a41a2-ed25-4172-be99-65f0fc69012f
+      X-Oauth-Scopes:
+      - identify,channels:read,users:read,chat:write:bot
+      Expires:
+      - Mon, 26 Jul 1997 05:00:00 GMT
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Access-Control-Expose-Headers:
+      - x-slack-req-id
+      X-Xss-Protection:
+      - '0'
+      X-Accepted-Oauth-Scopes:
+      - chat:write:bot
+      Vary:
+      - Accept-Encoding
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Headers:
+      - slack-route, x-slack-version-ts
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Referrer-Policy:
+      - no-referrer
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Via:
+      - haproxy-www-lt2p
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 7a5c063eecab094c6dee10829ad7c521.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - XOlepm0XyqhTCHNgjcG5wots8PNJYjNzmNCxVOzOQrkFyerRmvUrIA==
+    body:
+      encoding: UTF-8
+      string: '{"ok":true,"channel":"CFQT801G9","ts":"1553094074.000300","message":{"type":"message","subtype":"bot_message","text":"Hey
+        I can post messages!","ts":"1553094074.000300","username":"CheezItApp","bot_id":"BH55B5YQM"}}'
+    http_version: 
+  recorded_at: Wed, 20 Mar 2019 15:01:13 GMT
 recorded_with: VCR 4.0.0

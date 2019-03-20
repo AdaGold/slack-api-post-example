@@ -3,6 +3,7 @@ require "httparty"
 
 module SlackApi
   BASE_URL = "https://slack.com/api/"
+  API_KEY = ENV["SLACK_TOKEN"]
 
   # Code goes here
   class SlackApiError < StandardError; end
