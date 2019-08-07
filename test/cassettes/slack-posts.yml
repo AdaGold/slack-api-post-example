@@ -177,4 +177,63 @@ http_interactions:
         I can post messages!","ts":"1553094074.000300","username":"CheezItApp","bot_id":"BH55B5YQM"}}'
     http_version: 
   recorded_at: Wed, 20 Mar 2019 15:01:13 GMT
-recorded_with: VCR 4.0.0
+- request:
+    method: post
+    uri: https://slack.com/api//chat.postMessage
+    body:
+      encoding: UTF-8
+      string: token=&text=Hey%20I%20can%20post%20messages%21&channel=ports-api-testing
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Wed, 07 Aug 2019 17:40:07 GMT
+      Server:
+      - Apache
+      Access-Control-Expose-Headers:
+      - x-slack-req-id, retry-after
+      Access-Control-Allow-Headers:
+      - slack-route, x-slack-version-ts
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Referrer-Policy:
+      - no-referrer
+      X-Accepted-Oauth-Scopes:
+      - chat:write:user
+      Vary:
+      - Accept-Encoding
+      X-Slack-Req-Id:
+      - 8f8362b4-ab05-44ed-bb44-eb2424efaba2
+      X-Xss-Protection:
+      - '0'
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Via:
+      - haproxy-www-r55d
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 d6a002c70d55f415107618b0750d493d.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - SEA19-C2
+      X-Amz-Cf-Id:
+      - xdVSKs-J0gMI221FNYpFU7e0Jr1Adf2iiMx3ZBVQ6g7y26iiSmHzwg==
+    body:
+      encoding: UTF-8
+      string: '{"ok":false,"error":"not_authed"}'
+    http_version: 
+  recorded_at: Wed, 07 Aug 2019 17:40:07 GMT
+recorded_with: VCR 5.0.0
